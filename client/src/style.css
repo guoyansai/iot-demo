@@ -1,0 +1,27 @@
+html,
+body,
+#app,
+.area {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.border-left {
+  overflow: auto;
+  border-left: 1px solid #d8d8d8;
+  height: 100%;
+}
+.model-test {
+  border: 1px solid #006699;
+  background-color: #dceaf1;
+  margin: 0 12px 12px 12px;
+  height: 20vh;
+}
+
+.bg {
+  background-color: rgb(224, 226, 226);
+}
+.bg1 {
+  background-color: rgb(220, 247, 226);
+}
