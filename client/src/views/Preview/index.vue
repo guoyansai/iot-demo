@@ -115,6 +115,7 @@ onMounted(() => {
   <teleport to="body" v-if="showTeleport">
     <Point></Point>
   </teleport>
+  <h1>物联网交互ws示例</h1>
   <div style="background: #ffff00">
     <div id="panel" ref="panel"></div>
     <div ref="panel2" id="panel2">

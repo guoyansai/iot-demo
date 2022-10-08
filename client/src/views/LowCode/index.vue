@@ -52,12 +52,12 @@ const changeUserData = (user: object) => {
   <hr />
   {{ storeP.user }}
   <el-input v-model="name" placeholder="请输入名字"></el-input>
-  <button @click="changeUserName(name)">change username</button>
-  <button
+  <el-button @click="changeUserName(name)">change username</el-button>
+  <el-button
     @click="changeUserData({ username: name, role: storeP.user.role + '1' })"
   >
     change user
-  </button>
+  </el-button>
   <el-button @click="setModel()">赋值</el-button>
   44{{ storeP.title }}33
   <el-button @click="storeP.changeTitle">store action changeTitle</el-button>
