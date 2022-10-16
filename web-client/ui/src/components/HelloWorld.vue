@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { reactive, toRefs } from "vue";
-import type { todoListData } from "../type/todoList";
+import { reactive, toRefs } from 'vue';
+import type { todoListData } from '../type/todoList';
 
 defineProps<{ msg: string }>();
 
 const data = reactive<todoListData>({
-  title: "",
+  title: '',
   list: [],
 });
 
@@ -26,7 +26,7 @@ const { title, list } = toRefs(data);
   <div>
     <div>
       <input v-model="title" type="text" placeholder="请输入事项" />
-      <button @click="addFun">添加</button>
+      <el-button @click="addFun">添加</el-button>
     </div>
     <table>
       <tr>

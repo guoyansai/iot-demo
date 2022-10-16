@@ -60,14 +60,30 @@ const data1 = reactive({
 const data2: any[] = reactive([]);
 const panel = ref();
 const $echarts = echarts;
+
+const io = proxy.$io();
+// const io = proxy.$io('ws://127.0.0.1:9098');
+const ioServerCount = ref(1);
+const ioServerMsg = ref('');
+
+function sendMsg(msg: string) {
+  ioServerCount.value++;
+  const sendIo = io;
+  // const sendIo = io.connect('ws://127.0.0.1:9098');
+  console.log(666.333, sendIo, ioServerCount.value + ': ' + msg);
+  sendIo.emit('msg-client', ioServerCount.value + ': ' + msg);
+}
+
 onMounted(() => {
   const myChart1 = $echarts.init(panel.value);
   myChart1.setOption(opt1(data1));
 
-  const io = proxy.$io();
-  console.log(666.33, io);
   io.on('connect', () => {
     console.log('connect');
+  });
+
+  io.on('msg-server', (msg: { msg: string }) => {
+    ioServerMsg.value = msg.msg;
   });
 
   io.on('msg', (data: any) => {
@@ -131,6 +147,13 @@ onMounted(() => {
     </div>
   </div>
   ---123
+  <div>
+    <el-button @click.stop="sendMsg('发送消息1')" type="primary">
+      发送消息1
+    </el-button>
+    <el-button @click.stop="sendMsg('test1')">test1</el-button>
+    接收的服务器消息：{{ ioServerMsg }}
+  </div>
 </template>
 
 <style scoped>

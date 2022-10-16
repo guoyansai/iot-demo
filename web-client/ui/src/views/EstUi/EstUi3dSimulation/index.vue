@@ -46,8 +46,8 @@ let controls = new OrbitControls(camera, domThree);
 const loader = new GLTFLoader();
 loader.load(
   new URL('./Synapticon-ASample.gltf', import.meta.url).href,
-  function (gltf) {
-    gltf.scene.traverse(function (child) {
+  function (gltf: any) {
+    gltf.scene.traverse(function (child: any) {
       // if (child.isMesh) {
       // }
     });

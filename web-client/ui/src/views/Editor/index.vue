@@ -53,7 +53,7 @@ const { title, list } = toRefs(data);
   <div>
     <div>
       <input v-model="title" type="text" placeholder="请输入事项" />
-      <button @click="addFun">添加</button>
+      <el-button @click="addFun">添加</el-button>
     </div>
     <table>
       <tr>
@@ -71,9 +71,15 @@ const { title, list } = toRefs(data);
   {{ $appModel }}
   <el-input v-model="$appModel.ver" />
   <el-button @click="$appModel.ver++">2全局变量加1-处理全局model方案</el-button>
+  <div class="ak"><span class="akc">Sass</span></div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+.ak {
+  .akc {
+    color: aqua;
+  }
+}
 .read-the-docs {
   color: #888;
 }

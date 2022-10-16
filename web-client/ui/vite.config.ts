@@ -63,7 +63,7 @@ export default defineConfig(({ mode }) => {
     },
     // 构建时配置
     build: {
-      outDir: '../client-dist/',
+      outDir: '../../web-client-dist/ui/',
       // 非生产环境生成 sourcemap
       sourcemap: !IS_PROD,
       // Rollup 打包配置

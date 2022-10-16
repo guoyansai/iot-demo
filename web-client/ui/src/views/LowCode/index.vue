@@ -8,7 +8,7 @@ const name: Ref<string> = ref('tt');
 const storeP = storePinia();
 const { admin, model, user } = storeToRefs(storeP);
 storeP.$subscribe((args, state) => {
-  console.log(666.123, args, state);
+  console.log(666.465, args, state);
 });
 const setModel = () => {
   console.log(storeP.storeIotModel);

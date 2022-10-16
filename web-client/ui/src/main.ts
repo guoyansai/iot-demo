@@ -8,7 +8,7 @@ import './style.css';
 import App from './App.vue';
 
 // import io from 'socket.io/client-dist/socket.io';
-import io from 'socket.io-client';
+import { io } from 'socket.io-client';
 
 import MyHead from './components/MyHead.vue';
 import { dModel } from './mixins/dModel';
