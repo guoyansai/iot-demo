@@ -1,10 +1,10 @@
-const Router = require("koa-router");
+const RouterUser = require("koa-router");
 const { register, login } = require("../controller/user.controller");
 
-const router = new Router({ prefix: "/users" });
+const routerUser = new RouterUser({ prefix: "/users" });
 // 注册接口
-router.post("/register", register);
+routerUser.post("/register", register);
 // 登录接口
-router.post("/login", login);
+routerUser.post("/login", login);
 
-module.exports = router;
+module.exports = routerUser;
