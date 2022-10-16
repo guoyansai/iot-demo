@@ -1,4 +1,4 @@
-const PORT = 9098;
+const { APP_PORT } = require("./config/config.default");
 import axios from "axios";
 
 const fs = require("fs");
@@ -62,6 +62,64 @@ app.use(
 const Static = require("koa-static");
 app.use(Static(path.join(__dirname, "../web-client-dist/ui")));
 
+// 路由处理
+const Router = require("koa-router");
+// 子路由1
+let home = new Router();
+home
+  .get("/", async (ctx: { body: string }) => {
+    let html = `
+    <ul>
+      <li><a href="/api">/api</a></li>
+      <li><a href="/api/aaa">/api/aaa</a></li>
+      <li><a href="/page">/page</a></li>
+      <li><a href="/page/helloworld">/page/helloworld</a></li>
+      <li><a href="/page/404">/page/404</a></li>
+      <li><a href="/page/api">/page/api</a></li>
+    </ul>
+  `;
+    ctx.body = html;
+  })
+  .get("/aaa", async (ctx: { body: string }) => {
+    ctx.body = "<h1>aaa!</h1>";
+  });
+
+// 子路由2
+let page = new Router();
+page
+  .get("/", async (ctx: { body: string }) => {
+    ctx.body = "page-index!";
+  })
+  .get("/api", async (ctx: { body: string }) => {
+    const result = await axios.post(
+      "https://api.inews.qq.com/newsqa/v1/query/inner/publish/modules/list?modules=statisGradeCityDetail,diseaseh5Shelf"
+    );
+    ctx.body = {
+      ...result.data.data,
+    };
+  })
+  .get("/404", async (ctx: { body: string }) => {
+    ctx.body = "404 page!";
+  })
+  .get("/helloworld", async (ctx: { body: string }) => {
+    ctx.body = "helloworld page!";
+  });
+
+// 子路由web
+let web = new Router();
+web.all("/index", async (ctx: any, next: any) => {
+  await ctx.render("index");
+});
+
+// 装载所有子路由
+let router = new Router();
+router.use("/web", web.routes(), web.allowedMethods());
+
+router.use("/api", home.routes(), home.allowedMethods());
+router.use("/page", page.routes(), page.allowedMethods());
+
+app.use(router.routes()).use(router.allowedMethods());
+
 // websocket
 const server = http.createServer(app.callback());
 const Socket = require("socket.io");
@@ -93,6 +151,6 @@ setInterval(() => {
 }, 1000);
 
 //http lisenter
-server.listen(PORT, function () {
-  console.log("server is running on http://127.0.0.1:" + PORT);
+server.listen(APP_PORT, function () {
+  console.log("server is running on http://127.0.0.1:" + APP_PORT);
 });
