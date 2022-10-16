@@ -54,7 +54,7 @@ const Static = require("koa-static");
 app.use(Static(path.join(__dirname, "../../web-client-dist/ui")));
 
 // 路由处理
-const userRouter = require("./router/user.route");
+const userRouter = require("../router/user.route");
 app.use(userRouter.routes());
 
 module.exports = app;

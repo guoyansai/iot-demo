@@ -1,5 +1,4 @@
 const { APP_PORT } = require("./config/config.default");
-import axios from "axios";
 
 const http = require("http");
 
@@ -8,10 +7,10 @@ const iot = require("./iot/runtime");
 const iotInstance = new iot(require("./config").runMode, 2000); //production or development
 iotInstance.run();
 
-const { app } = require("./app/index");
+const App = require("./app");
 
 // websocket
-const server = http.createServer(app.callback());
+const server = http.createServer(App.callback());
 const Socket = require("socket.io");
 const io = Socket(server);
 const sockets: any[] = [];
