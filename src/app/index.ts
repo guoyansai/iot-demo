@@ -5,6 +5,9 @@ const path = require("path");
 const Koa = require("koa");
 const app = new Koa();
 
+const KoaBody = require("koa-body");
+app.use(KoaBody());
+
 // 跨域处理
 const cors = require("koa2-cors");
 app.use(
