@@ -11,6 +11,11 @@ declare module 'vue-router' {
 
 const routes: RouteRecordRaw[] = [
   {
+    path: '/iot',
+    name: 'iot',
+    component: () => import('@/views/iot/index.vue'),
+  },
+  {
     path: '/est',
     name: 'est',
     component: () => import('@/views/EstUi/index.vue'),
@@ -56,7 +61,7 @@ const router = createRouter({
 const Vnode = createVNode(LoadingBar);
 render(Vnode, document.body);
 
-const whileList = ['/', '/est'];
+const whileList = ['/', '/est', '/iot'];
 router.beforeEach((to, from, next) => {
   Vnode.component?.exposed?.startLoading();
   // document.title = to.meta.title;

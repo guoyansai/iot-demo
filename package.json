@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "nodemon --delay 500 src/index.ts",
     "devnode": "ts-node src/index.ts",
+    "devko": "ts-node src/ko.ts",
     "devapi": "ts-node src/api.ts"
   },
   "keywords": [],
