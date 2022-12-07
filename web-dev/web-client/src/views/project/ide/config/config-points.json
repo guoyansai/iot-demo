@@ -1,0 +1,30 @@
+{
+  "type": "points",
+  "uid": 1,
+  "label": "位姿栏",
+  "children": [
+    {
+      "type": "robot",
+      "label": "坐标系",
+      "children": [
+        {
+          "type": "point",
+          "ico": "Location",
+          "id": "pt",
+          "label": "点位",
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "style": { "color": "#686868", "backgroundColor": "#75befd33" },
+          "path": "/a/b/c",
+          "points": [],
+          "parents": [],
+          "children": [],
+          "candrop": true,
+          "showchildren": true,
+          "showattr": true
+        }
+      ]
+    }
+  ]
+}

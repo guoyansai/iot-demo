@@ -1,0 +1,219 @@
+{
+  "type": "tools",
+  "uid": 1,
+  "label": "控件栏",
+  "children": [
+    {
+      "type": "robot",
+      "label": "机器人",
+      "children": [
+        {
+          "type": "move",
+          "ico": "Position",
+          "id": "mv",
+          "label": "移动",
+          "style": { "color": "#686868", "backgroundColor": "#75befd66" },
+          "path": "/a/b/c",
+          "points": [[1, 2, 3]],
+          "parents": [],
+          "children": [],
+          "candrop": false,
+          "showchildren": true,
+          "showattr": true
+        }
+      ]
+    },
+    {
+      "type": "vars",
+      "label": "变量",
+      "children": [
+        {
+          "type": "set",
+          "ico": "Coin",
+          "id": "st",
+          "label": "设置变量",
+          "setname": "tmp",
+          "setvalue": "哈哈哈",
+          "style": { "color": "#686868", "backgroundColor": "#71cffb66" },
+          "path": "/a/b/c",
+          "parents": [],
+          "children": [],
+          "candrop": false,
+          "showchildren": true,
+          "showattr": true
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "label": "函数",
+      "children": [
+        {
+          "type": "create",
+          "ico": "TakeawayBox",
+          "id": "ct",
+          "label": "创建函数",
+          "setname": "fun",
+          "style": { "color": "#686868", "backgroundColor": "#39d9c966" },
+          "path": "/a/b/c",
+          "parents": [],
+          "children": [],
+          "candrop": false,
+          "showchildren": true,
+          "showattr": true
+        },
+        {
+          "type": "call",
+          "ico": "Phone",
+          "id": "cl",
+          "label": "调用函数",
+          "style": { "color": "#686868", "backgroundColor": "#ffe18166" },
+          "path": "/a/b/c",
+          "parents": [],
+          "children": [],
+          "candrop": false,
+          "showchildren": true,
+          "showattr": true
+        }
+      ]
+    },
+    {
+      "type": "logic",
+      "label": "逻辑",
+      "children": [
+        {
+          "type": "if",
+          "ico": "Sugar",
+          "id": "if",
+          "label": "如果",
+          "style": { "color": "#686868", "backgroundColor": "#8c9dff66" },
+          "path": "/a/b/c",
+          "parents": [],
+          "children": [],
+          "candrop": true,
+          "showchildren": true,
+          "showattr": true
+        },
+        {
+          "type": "elseif",
+          "ico": "Bowl",
+          "id": "ef",
+          "label": "再如果",
+          "style": { "color": "#686868", "backgroundColor": "#f8dcc666" },
+          "path": "/a/b/c",
+          "parents": [],
+          "children": [],
+          "candrop": true,
+          "showchildren": true,
+          "showattr": true
+        },
+        {
+          "type": "else",
+          "ico": "MilkTea",
+          "id": "es",
+          "label": "否则",
+          "style": { "color": "#686868", "backgroundColor": "#d2dae466" },
+          "path": "/a/b/c",
+          "parents": [],
+          "children": [],
+          "candrop": true,
+          "showchildren": true,
+          "showattr": true
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "label": "流程",
+      "children": [
+        {
+          "type": "loop",
+          "ico": "Refresh",
+          "id": "lp",
+          "label": "循环",
+          "time": 20,
+          "style": { "color": "#686868", "backgroundColor": "#5dd7ce66" },
+          "path": "/a/b/c",
+          "parents": [],
+          "children": [],
+          "candrop": true,
+          "showchildren": true,
+          "showattr": true
+        },
+        {
+          "type": "wait",
+          "ico": "Bell",
+          "id": "wt",
+          "label": "等待",
+          "time": 15,
+          "style": { "color": "#686868", "backgroundColor": "#b987fa66" },
+          "path": "/a/b/c",
+          "parents": [],
+          "children": [],
+          "candrop": false,
+          "showchildren": true,
+          "showattr": true
+        },
+        {
+          "type": "break",
+          "ico": "Bell",
+          "id": "bk",
+          "label": "终止",
+          "style": { "color": "#686868", "backgroundColor": "#b4e58f66" },
+          "path": "/a/b/c",
+          "parents": [],
+          "children": [],
+          "candrop": false,
+          "showchildren": true,
+          "showattr": true
+        },
+        {
+          "type": "group",
+          "ico": "Box",
+          "id": "gp",
+          "label": "组合",
+          "style": { "color": "#686868", "backgroundColor": "#d2dae466" },
+          "path": "/a/b/c",
+          "parents": [],
+          "children": [],
+          "candrop": true,
+          "showchildren": true,
+          "showattr": true
+        }
+      ]
+    },
+    {
+      "type": "meta",
+      "label": "元素",
+      "children": [
+        {
+          "type": "delete",
+          "ico": "Delete",
+          "id": "dt",
+          "label": "回收站",
+          "style": { "color": "#686868", "backgroundColor": "#b4e58f66" },
+          "path": "/a/b/c",
+          "parents": [],
+          "children": [],
+          "candrop": true,
+          "showchildren": true,
+          "showattr": true
+        },
+        {
+          "type": "comment",
+          "ico": "ChatDotSquare",
+          "id": "ct",
+          "label": "注释",
+          "desc": "备注",
+          "style": { "color": "#686868", "backgroundColor": "#d2dae466" },
+          "path": "/a/b/c",
+          "parents": [],
+          "children": [],
+          "candrop": false,
+          "showchildren": true,
+          "showattr": true
+        }
+      ]
+    }
+  ]
+}

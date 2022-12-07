@@ -1,0 +1,65 @@
+{
+  "page": {
+    "card": "卡片",
+    "cardmini": "迷你卡片",
+    "over": "叠加",
+    "overmini": "迷你叠加",
+    "tree": "树形",
+    "group": "组合预览"
+  },
+  "styles": ["tree", "point", "card", "over"],
+  "style": {
+    "tree": {
+      "type": "tree",
+      "label": "树形",
+      "attrshow": 1,
+      "styleto": 1,
+      "w": "108px",
+      "h": "98px",
+      "wt": "228px",
+      "ht": "38px",
+      "hf": "48px",
+      "wa": "228px",
+      "ha": "228px"
+    },
+    "point": {
+      "type": "point",
+      "label": "圆点",
+      "attrshow": 1,
+      "styleto": 1,
+      "w": "98px",
+      "h": "98px",
+      "hf": "48px",
+      "wt": "128px",
+      "ht": "28px",
+      "wa": "228px",
+      "ha": "228px"
+    },
+    "card": {
+      "type": "card",
+      "label": "卡片",
+      "attrshow": 1,
+      "styleto": 1,
+      "w": "98px",
+      "h": "98px",
+      "hf": "48px",
+      "wt": "228px",
+      "ht": "38px",
+      "wa": "228px",
+      "ha": "228px"
+    },
+    "over": {
+      "type": "over",
+      "label": "叠加",
+      "attrshow": 1,
+      "styleto": 0,
+      "w": "108px",
+      "h": "98px",
+      "hf": "48px",
+      "wt": "228px",
+      "ht": "38px",
+      "wa": "228px",
+      "ha": "228px"
+    }
+  }
+}

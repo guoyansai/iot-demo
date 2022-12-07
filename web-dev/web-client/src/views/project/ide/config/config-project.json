@@ -1,0 +1,60 @@
+{
+  "readme": "1.0工程的基础组成部分：工程project>任务task>程序programs|点集points",
+  "project": {
+    "ver": "1.0",
+    "uuid": 0,
+    "type": "project",
+    "id": "projectid",
+    "label": "工程名称",
+    "customconfig": {
+      "page": "card"
+    },
+    "doing": {
+      "tasks": {
+        "main": "",
+        "current": ""
+      },
+      "add": {},
+      "drag": {},
+      "drop": {}
+    },
+    "tasks": []
+  },
+  "task": {
+    "type": "task",
+    "id": "taskid",
+    "label": "任务名称",
+    "points": {},
+    "programs": {}
+  },
+  "points": {
+    "type": "points",
+    "id": "pointsid",
+    "label": "点集名称",
+    "showchildren": true,
+    "treeconfig": {
+      "type": "point"
+    },
+    "doing": {
+      "current": {},
+      "play": {}
+    },
+    "parents": [],
+    "children": []
+  },
+  "programs": {
+    "type": "programs",
+    "id": "programsid",
+    "label": "程序名称",
+    "showchildren": true,
+    "treeconfig": {
+      "type": "card"
+    },
+    "doing": {
+      "current": {},
+      "play": {}
+    },
+    "parents": [],
+    "children": []
+  }
+}
