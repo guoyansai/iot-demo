@@ -5,6 +5,7 @@ import NotFoundComponent from './components/404.vue';
 import IndexView from '@/views/Index.vue';
 import projectRoutes from '@/views/project/routes'; // project子路由文件
 import testRoutes from '@/views/test/routes'; // test子路由文件
+import asaiwebRoutes from '@/views/asaiweb/routes'; // test子路由文件
 
 // 定义项目路由
 const routes: RouteRecordRaw[] = [
@@ -17,7 +18,7 @@ const routes: RouteRecordRaw[] = [
       // meta中可以定义一些页面的元素
       title: '主页', // 页面的标题
     },
-    children: [...projectRoutes, ...testRoutes],
+    children: [...asaiwebRoutes,...projectRoutes, ...testRoutes],
   },
   { path: '/:pathMatch(.*)', component: NotFoundComponent },
 ];

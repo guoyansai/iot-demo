@@ -1,6 +1,6 @@
 export default [
   {
-    path: '', // 主路由地址
+    path: 'ide', // 主路由地址
     alias: 'project', // 别名，和路由一样
     name: 'projectIndex',
     component: () => import('@/views/project/index.vue'), // 组件懒加载
